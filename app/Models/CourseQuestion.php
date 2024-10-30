@@ -13,7 +13,12 @@ class CourseQuestion extends Model
     protected $guarded = [
         'id'
     ];
-    
+
+    protected $fillable = [
+        'question',
+        'course_id'
+    ];
+
     /**
      * Get the user that owns the CourseQuestion
      *
@@ -31,6 +36,6 @@ class CourseQuestion extends Model
      */
     public function answers()
     {
-        return $this->hasMany(CourseAnswer::class, 'question_id', 'id');
+        return $this->hasMany(CourseAnswer::class, 'course_question_id', 'id');
     }
 }
