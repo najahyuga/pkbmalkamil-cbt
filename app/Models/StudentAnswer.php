@@ -19,8 +19,8 @@ class StudentAnswer extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function questions()
+    public function question()
     {
-        return $this->belongsTo(CourseAnswer::class, 'course_questions_id', 'id');
+        return $this->belongsTo(CourseQuestion::class, 'course_question_id', 'id');
     }
 }
