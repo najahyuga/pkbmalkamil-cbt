@@ -20,8 +20,13 @@ class CourseAnswer extends Model
         'course_question_id'
     ];
 
+    /**
+     * Get the user that owns the StudentAnswer
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function question()
     {
-        return $this->belongsTo(CourseQuestion::class, 'course_question_id');
+        return $this->belongsTo(CourseAnswer::class, 'course_question_id', 'id');
     }
 }
