@@ -38,7 +38,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/learning/raport/{course}', [LearningController::class, 'learning_raport'])->middleware('role:student')->name('learning.raport.course');
 
         Route::get('/learning', [LearningController::class, 'index'])->middleware('role:student')->name('learning.index');
-        Route::get('/learning/{course}/{question}', [StudentAnswerController::class, 'store'])->middleware('role:student')->name('learning.course.answer.store');
+        Route::get('/learning/{course}/{question}', [LearningController::class, 'learning'])->middleware('role:student')->name('learning.course');
+        Route::post('/learning/{course}/{question}', [StudentAnswerController::class, 'store'])->middleware('role:student')->name('learning.courses.answer.store');
     });
 });
 
