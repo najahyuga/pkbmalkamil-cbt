@@ -4,6 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{asset('css/output.css')}}" rel="stylesheet">
+        <!-- Favicons -->
+        <link href="{{asset('images/logo/logopkbm.jpeg')}}" rel="icon">
+        <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     </head>
     <body class="font-poppins text-[#0A090B]">
@@ -11,7 +14,7 @@
             <div id="sidebar" class="w-[270px] flex flex-col shrink-0 min-h-screen justify-between p-[30px] border-r border-[#EEEEEE] bg-[#FBFBFB]">
                 <div class="w-full flex flex-col gap-[30px]">
                     <a href="index.html" class="flex items-center justify-center">
-                        <img src="{{asset('images/logo/logo.svg')}}" alt="logo">
+                        <img src="{{asset('images/logo/logopkbm.jpeg')}}" alt="logo">
                     </a>
                     <ul class="flex flex-col gap-3">
                         <li>
